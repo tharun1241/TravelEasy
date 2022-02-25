@@ -8,6 +8,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { PaymentComponent } from './confirmation/payment/payment.component';
 import { TravellersComponent } from './confirmation/travellers/travellers.component';
 import { SearchBusesComponent } from './search-buses/search-buses.component';
+import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { SearchBusesComponent } from './search-buses/search-buses.component';
     ConfirmationComponent,
     PaymentComponent,
     TravellersComponent,
-    SearchBusesComponent
+    SearchBusesComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

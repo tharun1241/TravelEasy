@@ -1,0 +1,67 @@
+
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+    <div class="card p-4">
+      <div class="mb-3 image d-flex flex-column justify-content-center align-items-center">  <img src="assets/Images/man.png" height="100" width="100" /></div>
+      <div>
+        <form (ngSubmit)="onSubmit(profile)"  #profile="ngForm">
+            <div class="form-group row">
+                <label for="username" class="col-sm-4 col-form-label">Name</label>
+                <div class="col-sm-8">
+                    <input type="text" 
+                    class="form-control-plaintext" id="username"  [disabled]="!edit"
+                  
+                    name="username"
+                    [(ngModel)]="username" 
+                    required>
+                </div>
+            </div>
+            
+  
+            <div class="form-group row mt-3">
+              <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
+              <div class="col-sm-8">
+                <input type="email"  class="form-control-plaintext" id="staticEmail"  [disabled]="!edit"   [(ngModel)]="mail"  name="email" required email #email="ngModel" >
+                <!--span class="help-block" style="color: red;" *ngIf="!email.valid && email.touched">*Please enter a valid email</span-->
+              </div>
+            </div>
+    
+            <div class="form-group row mt-3">
+              <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
+              <div class="col-sm-8">
+                <input type="password" class="form-control-plaintext" id="inputPassword" placeholder="Pass"  [disabled]="!edit"   [(ngModel)]="password"  name="password" required >
+               
+              </div>
+            </div>
+    
+            <div class="form-group row mt-3">
+                <label for="phone" class="col-sm-4 col-form-label">Phone Number</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control-plaintext" id="phone" placeholder="1234567890"  [disabled]="!edit"  [(ngModel)]="phone" name="phone" required>
+                </div>
+              </div>
+    
+    
+              <div class="form-group row mt-3">
+                <label for="gender" class="col-sm-4 col-form-label">Gender</label>
+                <div class="col-sm-8">
+                    <select class="custom-select form-control-plaintext" id="gender"  [disabled]="!edit" [(ngModel)]="Gender" name="gender" required>
+                      <option selected value="male">Male</option>
+                      <option value="female">Female</option>
+                     
+                    </select>
+                </div>
+              </div>
+             
+              <div class="mt-3 d-flex justify-content-center">
+                <button (click)="editform()" *ngIf="!edit" class="btn btn-primary">Edit Profile</button>
+                <button  type="submit" *ngIf="edit" class="btn btn-danger" [disabled]="!profile.valid">Save Profile</button>
+            </div>
+          </form>
+        </div>
+        
+        
+        
+    </div>
+  </div>
+  
+  
