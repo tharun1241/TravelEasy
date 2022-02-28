@@ -1,0 +1,60 @@
+
+    <br><br><br>
+    <body>
+        <div>
+            <button (click)="printtable()">Get</button>
+            <br><br>
+            <div *ngIf="printss">
+                <table class ="content-table">
+                    
+                   
+                    <thead>
+                       <tr>
+                           <th>S.no.</th>
+                           <th>Booking ID</th>
+                           <th>Name</th>
+                           <th>Age</th>
+                           <th>Location from</th>
+                           <th>Location to</th>
+                           <th>Date of travel</th>
+                       </tr>
+                    </thead> 
+                <tbody >
+                        <tr *ngFor="let booking of booking ;index as i">
+                            <td>
+                                {{i}}
+                            </td>
+                            <td>
+                                {{booking.booking_ID}}
+                            </td>
+                            <td>
+                                {{booking.name}}
+                            </td>
+                            <td>
+                                {{booking.age}}
+                            </td>
+                            <td>
+                                {{booking.location_from}}
+                            </td>
+                            <td>
+                                {{booking.location_to}}
+                            </td>
+                            <td>
+                                {{booking.date_of_travel}}
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+               
+              
+              
+              </div>
+             
+            
+        </div>
+    </body>
+
+
+
+

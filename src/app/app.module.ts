@@ -9,6 +9,9 @@ import { PaymentComponent } from './confirmation/payment/payment.component';
 import { TravellersComponent } from './confirmation/travellers/travellers.component';
 import { SearchBusesComponent } from './search-buses/search-buses.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FooterComponent } from './footer/footer.component';
+import { MybookingsComponent } from  './mybookings/mybookings.component';
+
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -19,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     PaymentComponent,
     TravellersComponent,
     SearchBusesComponent,
-    ProfileComponent
+    ProfileComponent,
+    FooterComponent,
+    MybookingsComponent,
   ],
   imports: [
     BrowserModule,
